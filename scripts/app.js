@@ -8,6 +8,8 @@ let userInput;
 
 let res;
 
+let dataReturn = document.getElementById("dataReturn");
+
 
 
 rock.addEventListener("click", function(){
@@ -19,25 +21,26 @@ rock.addEventListener("click", function(){
 paper.addEventListener("click", function(){
   userInput = "paper"
   console.log(userInput)
+  console.log(res)
 })
 
 scissors.addEventListener("click", function(){
   userInput = "scissors"
   console.log(userInput)
+  console.log(res)
 })
 
 lizard.addEventListener("click", function(){
   userInput = "lizard"
   console.log(userInput)
+  console.log(res)
 })
 
 spock.addEventListener("click", function(){
   userInput = "spock"
   console.log(userInput)
+  console.log(res)
 })
-
-
-let dataReturn = document.getElementById("dataReturn");
 
 
 
