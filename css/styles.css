@@ -20,6 +20,12 @@ body{
   grid-template-columns: repeat(5, auto)  
 }
 
+.textFormat{
+  font-size: 100px;
+}
+
+
+
 
 
 
