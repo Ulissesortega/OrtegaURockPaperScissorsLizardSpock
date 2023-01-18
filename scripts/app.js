@@ -3,19 +3,22 @@ let paper = document.getElementById("paper");
 let scissors = document.getElementById("scissors");
 let lizard = document.getElementById("lizard");
 let spock = document.getElementById("spock");
+let injectHere = document.getElementById("injectHere");
 
 let userInput;
 
 let res;
 
-let dataReturn = document.getElementById("dataReturn");
+
 
 
 
 rock.addEventListener("click", function(){
    userInput = "rock"
-   console.log(userInput)
-   console.log(res)
+   console.log(userInput);
+   console.log(res);
+   OutCome();
+   GetData();
 })
 
 paper.addEventListener("click", function(){
@@ -47,9 +50,18 @@ spock.addEventListener("click", function(){
 function GetData() {
   fetch("https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption")
   .then(response => response.text())
-  .then(data => {res = data;
-    console.log(res);
-  })
+  .then(data => {res = data;})
 }
 
 GetData();
+
+function OutCome(){
+  if(userInput == "rock" && res == "Paper")
+  {
+    injectHere.textContent = "You Lost, Computer Wins!"
+  }
+}
+
+
+
+
