@@ -21,7 +21,15 @@ body{
 }
 
 .textFormat{
+  color: white;
   font-size: 100px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
 }
 
 
