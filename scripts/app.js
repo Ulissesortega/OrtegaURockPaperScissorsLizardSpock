@@ -142,7 +142,7 @@ function OutCome() {
     injectHere.textContent = "Spock Disproved by Paper, You Lost!"
   }
   else if (userInput == "spock" && res == "Scissors") {
-    injectHere.textContent = "Spock Crushes Scissors, You Lose!"
+    injectHere.textContent = "Spock Smashes Scissors, You Win!"
   }
   else if (userInput == "spock" && res == "Lizard") {
     injectHere.textContent = "Spock Posined by Lizard, You Lose!"
