@@ -11,8 +11,9 @@ let rounds = document.getElementById("rounds")
 let ties = document.getElementById("ties")
 let userInput;
 let res;
+let vsCPU = document.getElementById("vsCPU");
 
-//Counters===========================================================================================
+//?Counters===========================================================================================
 let userCounter = 0;
 console.log(userCounter)
 
@@ -20,18 +21,19 @@ let cpuCounter = 0;
 console.log(userCounter)
 
 let tiesCounter = 0;
-console.log(userCounter)
+console.log(tiesCounter)
 
-let roundsCounter = userCounter + cpuCounter;
+let roundsCounter = userCounter + cpuCounter + tiesCounter;
 console.log(roundsCounter)
 
-// Event Listeners====================================================================================
+//?Event Listeners====================================================================================
 rock.addEventListener("click", function () {
   userInput = "rock"
   console.log(userInput);
   console.log(res);
   OutCome();
   GetData();
+  console.log(vsCPU.checked)
 })
 
 paper.addEventListener("click", function () {
@@ -66,7 +68,7 @@ spock.addEventListener("click", function () {
   GetData();
 })
 
-// User Counter===========================================================================================
+//?User Counter===========================================================================================
 rock.addEventListener("click", () =>{
   user.textContent = " Player 1 Wins " + userCounter;
 })
@@ -87,7 +89,7 @@ spock.addEventListener("click", () =>{
   user.textContent = " Player 1 Wins " + userCounter;
 })
 
-//CPU counter============================================================================================
+//?CPU counter============================================================================================
 rock.addEventListener("click", () =>{
   cpu.textContent = " CPU 1 Wins " + cpuCounter;
 })
@@ -107,8 +109,29 @@ lizard.addEventListener("click", () =>{
 spock.addEventListener("click", () =>{
   cpu.textContent = " CPU 1 Wins " + cpuCounter;
 })
+//?Ties Rounds============================================================================================
 
-//Total Rounds============================================================================================
+rock.addEventListener("click", () =>{
+  ties.textContent = " Players Tie " + tiesCounter;
+})
+
+paper.addEventListener("click", () =>{
+  ties.textContent = " Players Tie " + tiesCounter;
+})
+
+scissors.addEventListener("click", () =>{
+  ties.textContent = " Players Tie " + tiesCounter;
+})
+
+lizard.addEventListener("click", () =>{
+  ties.textContent = " Players Tie " + tiesCounter;
+})
+
+spock.addEventListener("click", () =>{
+  ties.textContent = " Players Tie " + tiesCounter;
+})
+
+//?Total Rounds============================================================================================
 rock.addEventListener("click", () =>{
   rounds.textContent = "Total Rounds " + " " + roundsCounter;
 })
@@ -129,9 +152,7 @@ spock.addEventListener("click", () =>{
   rounds.textContent = " Total Rounds " + " " + roundsCounter;
 })
 
-
-
-// Fect Fuction============================================================================================
+//?Fect Fuction============================================================================================
 function GetData() {
   fetch("https://scottsrpsls.azurewebsites.net/api/RockPaperScissors/GetRandomOption")
     .then(response => response.text())
@@ -140,13 +161,15 @@ function GetData() {
 
 GetData();
 
-// Function Outome=========================================================================================
+//?Function Outome=========================================================================================
 function OutCome() {
 
-  // Rock
+  //?Rock
   if (userInput == "rock" && res == "Rock") {
     injectHere.textContent = "Rock vs. Rock, This is a Tie!"
-    console.log();
+    tiesCounter++
+    console.log(ties);
+    roundsCounter++
   } 
   else if (userInput == "rock" && res == "Paper") {
     injectHere.textContent = "Rock get's Cover by Paper, You Lose!"
@@ -173,10 +196,12 @@ function OutCome() {
     roundsCounter++
   }
 
-  // Paper
+  //?Paper
   if (userInput == "paper" && res == "Paper") {
     injectHere.textContent = "Paper vs. Paper, This is a Tie!"
-    console.log();
+    tiesCounter++
+    console.log(ties);
+    roundsCounter++
   }
   else if (userInput == "paper" && res == "Rock") {
     injectHere.textContent = "Paper Covers Rock, You Win!"
@@ -191,9 +216,10 @@ function OutCome() {
     roundsCounter++
   }
   else if (userInput == "paper" && res == "Lizard") {
-    injectHere.textContent = "Paper Gets Eaten by Lizard, You Lose!"
-    cpuCounter++
-    console.log(cpuCounter)
+    injectHere.textContent = "Paper Gets Eaten by Lizard, You Win!"
+    userCounter++
+    console.log(userCounter)
+    roundsCounter++
   }
   else if (userInput == "paper" && res == "Spock") {
     injectHere.textContent = "Paper Disproves Spock, You Win!"
@@ -202,10 +228,11 @@ function OutCome() {
    roundsCounter++
   }
 
-  //Scissors
+  //?Scissors
   if (userInput == "scissors" && res == "Scissors") {
     injectHere.textContent = "Scissors vs. scissors, This is a Tie!"
-    console.log();
+    tiesCounter++
+    console.log(ties);
   }
   else if (userInput == "scissors" && res == "Rock") {
     injectHere.textContent = "Scissors Crushed by Rock, You Lose!"
@@ -232,10 +259,11 @@ function OutCome() {
     roundsCounter++
   }
 
-  //Lizard
+  //?Lizard
   if (userInput == "lizard" && res == "Lizard") {
     injectHere.textContent = "Lizard vs. Lizard, This is a Tie!"
-    console.log();
+    tiesCounter++
+    console.log(ties);
   }
   else if (userInput == "lizard" && res == "Rock") {
     injectHere.textContent = "Lizard Crushed by Rock, You Lose!"
@@ -262,10 +290,11 @@ function OutCome() {
     roundsCounter++
   }
 
-  //Spock
+  //?Spock
   if (userInput == "spock" && res == "Spock") {
     injectHere.textContent = "Spock vs. Spock, This is a Tie!"
-    console.log();
+    tiesCounter++
+    console.log(ties);
   }
   else if (userInput == "spock" && res == "Rock") {
     injectHere.textContent = "Spock Vaporize Rock, You Win!"
