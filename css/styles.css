@@ -46,6 +46,12 @@ button {
   margin-left: -330px;
 }
 
+.btnPostion{
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 40px;
+}
+
 
 
 

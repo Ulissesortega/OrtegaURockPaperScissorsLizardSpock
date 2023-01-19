@@ -5,11 +5,16 @@ let scissors = document.getElementById("scissors");
 let lizard = document.getElementById("lizard");
 let spock = document.getElementById("spock");
 let injectHere = document.getElementById("injectHere");
+let user = document.getElementById("user")
+let cpu = document.getElementById("cpu")
 
 let userInput;
-
 let res;
 
+let userCounter = 0;
+console.log(userCounter)
+let cpuCounter = 0;
+console.log(userCounter)
 
 rock.addEventListener("click", function () {
   userInput = "rock"
@@ -51,6 +56,10 @@ spock.addEventListener("click", function () {
   GetData();
 })
 
+rock.addEventListener("click", () =>{
+  user.textContent = " Player 1 Wins " + userCounter;
+})
+
 
 
 function GetData() {
@@ -66,18 +75,27 @@ function OutCome() {
   // Rock
   if (userInput == "rock" && res == "Rock") {
     injectHere.textContent = "Rock vs. Rock, This is a Tie!"
+    console.log(cpuCounter)
   } 
   else if (userInput == "rock" && res == "Paper") {
     injectHere.textContent = "Rock get's Cover by Paper, You Lose!"
+    cpuCounter++
+    console.log(cpuCounter)
   }
   else if (userInput == "rock" && res == "Scissors") {
     injectHere.textContent = "Rock Crushes Scissors, You Win!"
+   userCounter++ 
+   console.log(userCounter)
   }
   else if (userInput == "rock" && res == "Lizard") {
     injectHere.textContent = "Rock Crushes Lizard, You Win!"
+    userCounter++
+    console.log(userCounter)
   }
   else if (userInput == "rock" && res == "Spock") {
     injectHere.textContent = "Spock Vaporizes Rock, You Lose!"
+    cpuCounter++
+    console.log(cpuCounter)
   }
 
   // Paper

@@ -17,16 +17,17 @@
 <body>
   <div class="container-fluid homeImg">
 
+
     <section id="">
       <div class="row">
         <div class="col mt-5 position1">
-          <input type="checkbox" id="threeRounds" name="scales">
-          <label for="threeRounds" class="text-white">3 Rounds</label>
+          <input type="checkbox" id="vsCPU" name="scales">
+          <label for="vsCPU" class="text-white">VS. CPU</label>
         </div>
 
         <div class="col mt-5 position2">
-          <input type="checkbox" id="threeRounds" name="scales">
-          <label for="fiveRounds" class="text-white">5 Rounds</label>
+          <input type="checkbox" id="tPlayers" name="scales">
+          <label for="tPlayers" class="text-white">2 Players</label>
         </div>
       </div>
     </section>
@@ -34,22 +35,23 @@
     <section id="">
       <div class="row text-center">
         <div class="col mt-5  d-flex justify-content-end">
-          <input type="checkbox" id="threeRounds" name="scales">
-          <label for="threeRounds" class="text-white">3 Rounds</label>
+          <input type="checkbox" id="oneRound" name="scales">
+          <label for="oneRound" class="text-white">1 Round</label>
         </div>
 
         <div class="col mt-5">
           <input type="checkbox" id="threeRounds" name="scales">
-          <label for="fiveRounds" class="text-white">5 Rounds</label>
+          <label for="threeRounds" class="text-white">3 Out Of %</label>
         </div>
 
         <div class="col mt-5 d-flex justify-content-start">
-          <input type="checkbox" id="threeRounds" name="scales">
-          <label for="sevenRounds" class="text-white">7 Rouns</label>
+          <input type="checkbox" id="fiveRounds" name="scales">
+          <label for="fiveRounds" class="text-white">5 Out Of 7</label>
         </div>
 
       </div>
     </section>
+
     <!-- Titles -->
     <div class="row text-white">
       <div class="col mt-5 ">
@@ -108,14 +110,26 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- My JS -->
-  <script src="./scripts/app.js"></script>
-  <!-- BootStarp JS -->
+
+
+    <div class="row mt-3">
+      <div id="user" class="col-6 text-white text-center">
+        Player 1 Counter
+      </div>
+      <div id="cpu" class="col-6 text-white text-center">
+        CPU Counter
+      </div>
+    </div>
+
+    <!-- Last div -->
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <!-- My JS -->
+  <script src="./scripts/app.js"></script>
+  <!-- BootStarp JS -->
 </body>
 
 </html>
