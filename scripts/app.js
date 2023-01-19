@@ -73,7 +73,7 @@ function OutCome() {
     injectHere.textContent = "Rock get's Cover by Paper, You Lose!"
   }
   else if (userInput == "rock" && res == "Scissors") {
-    injectHere.textContent = "Rock Crush Scissors, You Win!"
+    injectHere.textContent = "Rock Crushes Scissors, You Win!"
   }
   else if (userInput == "rock" && res == "Lizard") {
     injectHere.textContent = "Rock Crushes Lizard, You Win!"
@@ -133,6 +133,21 @@ function OutCome() {
     injectHere.textContent = "Lizard Vaporized by Spock, You Lose!"
   }
 
-  //
+  //Spock
+  if (userInput == "spock" && res == "Lizard") {
+    injectHere.textContent = "Spock vs, Spock, This is a Tie!"
+  }
+  else if (userInput == "spock" && res == "Rock") {
+    injectHere.textContent = "Spock Vaporize Rock, You Win!"
+  }
+  else if (userInput == "spock" && res == "Paper") {
+    injectHere.textContent = "Spock Disproved by Paper, You Lost!"
+  }
+  else if (userInput == "spock" && res == "Scissor") {
+    injectHere.textContent = "Spock Crushes Scissors, You Lose!"
+  }
+  else if (userInput == "spock" && res == "Lizard") {
+    injectHere.textContent = "Spock Posined by Lizard, You Lose!"
+  }
 
 }
