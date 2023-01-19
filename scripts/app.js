@@ -18,6 +18,8 @@ console.log(userCounter)
 let cpuCounter = 0;
 console.log(userCounter)
 
+
+
 let roundsCounter = userCounter + cpuCounter;
 console.log(roundsCounter)
 
