@@ -326,3 +326,7 @@ function OutCome() {
   }
 
 }
+
+$('#my-modal').on('hide.bs.modal', () => {
+  $('#ytplayer').attr('src', '');
+});
