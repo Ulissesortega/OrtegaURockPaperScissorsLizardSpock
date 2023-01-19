@@ -32,6 +32,19 @@ button {
   background-color: inherit;
 }
 
+.displayinline{
+  display: inline;
+}
+
+.position1{
+  position: relative;
+  margin-left: 490px;
+}
+
+.position2{
+  position: relative;
+  margin-left: -330px;
+}
 
 
 
