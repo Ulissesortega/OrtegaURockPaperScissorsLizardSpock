@@ -84,7 +84,7 @@ function OutCome() {
 
   // Paper
   if (userInput == "paper" && res == "Paper") {
-    injectHere.textContent = "Paper vs, Paper, This is a Tie!"
+    injectHere.textContent = "Paper vs. Paper, This is a Tie!"
   }
   else if (userInput == "paper" && res == "Rock") {
     injectHere.textContent = "Paper Covers Rock, You Win!"
@@ -101,10 +101,10 @@ function OutCome() {
 
   //Scissors
   if (userInput == "scissors" && res == "scissors") {
-    injectHere.textContent = "Scissors vs, scissors, This is a Tie!"
+    injectHere.textContent = "Scissors vs. scissors, This is a Tie!"
   }
   else if (userInput == "scissors" && res == "Rock") {
-    injectHere.textContent = "scissors Crushed by Rock, You Lose!"
+    injectHere.textContent = "Scissors Crushed by Rock, You Lose!"
   }
   else if (userInput == "scissors" && res == "Paper") {
     injectHere.textContent = "Scissors Cuts Paper, You Win!"
@@ -118,7 +118,7 @@ function OutCome() {
 
   //Lizard
   if (userInput == "lizard" && res == "Lizard") {
-    injectHere.textContent = "Lizard vs, Lizard, This is a Tie!"
+    injectHere.textContent = "Lizard vs. Lizard, This is a Tie!"
   }
   else if (userInput == "lizard" && res == "Rock") {
     injectHere.textContent = "Lizard Crushed by Rock, You Lose!"
@@ -135,7 +135,7 @@ function OutCome() {
 
   //Spock
   if (userInput == "spock" && res == "Lizard") {
-    injectHere.textContent = "Spock vs, Spock, This is a Tie!"
+    injectHere.textContent = "Spock vs. Spock, This is a Tie!"
   }
   else if (userInput == "spock" && res == "Rock") {
     injectHere.textContent = "Spock Vaporize Rock, You Win!"
