@@ -13,6 +13,7 @@ let userInput;
 let res;
 let vsCPU = document.getElementById("vsCPU");
 
+
 //?Counters===========================================================================================
 let userCounter = 0;
 console.log(userCounter)
@@ -233,6 +234,7 @@ function OutCome() {
     injectHere.textContent = "Scissors vs. scissors, This is a Tie!"
     tiesCounter++
     console.log(ties);
+    roundsCounter++
   }
   else if (userInput == "scissors" && res == "Rock") {
     injectHere.textContent = "Scissors Crushed by Rock, You Lose!"
@@ -264,6 +266,7 @@ function OutCome() {
     injectHere.textContent = "Lizard vs. Lizard, This is a Tie!"
     tiesCounter++
     console.log(ties);
+    roundsCounter++
   }
   else if (userInput == "lizard" && res == "Rock") {
     injectHere.textContent = "Lizard Crushed by Rock, You Lose!"
@@ -295,6 +298,7 @@ function OutCome() {
     injectHere.textContent = "Spock vs. Spock, This is a Tie!"
     tiesCounter++
     console.log(ties);
+    roundsCounter++
   }
   else if (userInput == "spock" && res == "Rock") {
     injectHere.textContent = "Spock Vaporize Rock, You Win!"
