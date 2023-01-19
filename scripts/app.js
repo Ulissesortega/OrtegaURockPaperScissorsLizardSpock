@@ -8,6 +8,7 @@ let injectHere = document.getElementById("injectHere");
 let user = document.getElementById("user")
 let cpu = document.getElementById("cpu")
 let rounds = document.getElementById("rounds")
+let ties = document.getElementById("ties")
 let userInput;
 let res;
 
@@ -18,7 +19,8 @@ console.log(userCounter)
 let cpuCounter = 0;
 console.log(userCounter)
 
-
+let tiesCounter = 0;
+console.log(userCounter)
 
 let roundsCounter = userCounter + cpuCounter;
 console.log(roundsCounter)
