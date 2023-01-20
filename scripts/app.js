@@ -39,6 +39,7 @@ rock.addEventListener("click", function () {
   OutCome();
   GetData();
   console.log(vsCPU.checked)
+  OneRoundWinner()
 })
 
 paper.addEventListener("click", function () {
@@ -77,18 +78,22 @@ spock.addEventListener("click", function () {
 vsCPU.addEventListener("click", () => {
   if(document.getElementById("vsCPU").checked){
   document.getElementById("tPlayers").disabled = true;
+  document.getElementById("rselect").classList.remove("hide");
 }
 else{
   document.getElementById("tPlayers").disabled = false;
+  document.getElementById("rselect").classList.add("hide");
 }
 })
 
 tPlayers.addEventListener("click", () => {
   if(document.getElementById("tPlayers").checked){
     document.getElementById("vsCPU").disabled = true;
+    document.getElementById("rselect").classList.remove("hide");
   }
   else{
-    document.getElementById("vsCPU").disabled = false;  
+    document.getElementById("vsCPU").disabled = false;
+    document.getElementById("rselect").classList.add("hide");  
   }
 })
 
@@ -124,10 +129,6 @@ sevenrounds.addEventListener("click", () =>{
     document.getElementById("fiverounds").disabled = false;  
   }
 })
-
-
-
-
 
 //User Counter===========================================================================================
 rock.addEventListener("click", () => {
@@ -387,9 +388,15 @@ function OutCome() {
 }
 
 //Game Modes===========================================================================================
+function OneRoundWinner(){
+  if((userCounter = 3) || (cpuCounter = 2) || (tiesCounter = 2) && (roundsCounter = 5))
+  {
+    alert(123)
+  }elseif ((userCounter = 2) || (cpuCounter = 3) || (tiesCounter = 2) && (roundsCounter = 5))
+  {
+    alert(456)
+  }
 
-function isChecked(){
-  
 }
 
 
