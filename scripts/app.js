@@ -16,6 +16,7 @@ let tPlayers = document.getElementById("tPlayers");
 let oneround = document.getElementById("oneround");
 let fiverounds = document.getElementById("fiverounds");
 let sevenrounds = document.getElementById("sevenrounds");
+let gamebody = document.getElementById("gamepanel");
 
 
 //Counters===========================================================================================
@@ -38,8 +39,6 @@ rock.addEventListener("click", function () {
   console.log(res);
   OutCome();
   GetData();
-  console.log(vsCPU.checked)
-  OneRoundWinner()
 })
 
 paper.addEventListener("click", function () {
@@ -101,10 +100,12 @@ oneround.addEventListener("click", () =>{
   if(document.getElementById("oneround").checked){
     document.getElementById("fiverounds").disabled = true;
     document.getElementById("sevenrounds").disabled = true;
+    document.getElementById("gamepanel").classList.remove("hide");
   }
   else{
     document.getElementById("fiverounds").disabled = false;
-    document.getElementById("sevenrounds").disabled = false;  
+    document.getElementById("sevenrounds").disabled = false;
+    document.getElementById("gamepanel").classList.add("hide");  
   }
 })
 
@@ -112,10 +113,12 @@ fiverounds.addEventListener("click", () =>{
   if(document.getElementById("fiverounds").checked){
     document.getElementById("oneround").disabled = true;
     document.getElementById("sevenrounds").disabled = true;
+    document.getElementById("gamepanel").classList.remove("hide");
   }
   else{
     document.getElementById("oneround").disabled = false;
-    document.getElementById("sevenrounds").disabled = false;  
+    document.getElementById("sevenrounds").disabled = false;
+    document.getElementById("gamepanel").classList.add("hide");  
   }
 })
 
@@ -123,10 +126,12 @@ sevenrounds.addEventListener("click", () =>{
   if(document.getElementById("sevenrounds").checked){
     document.getElementById("oneround").disabled = true;
     document.getElementById("fiverounds").disabled = true;
+    document.getElementById("gamepanel").classList.remove("hide");
   }
   else{
     document.getElementById("oneround").disabled = false;
-    document.getElementById("fiverounds").disabled = false;  
+    document.getElementById("fiverounds").disabled = false;
+    document.getElementById("gamepanel").classList.add("hide");  
   }
 })
 
@@ -391,10 +396,10 @@ function OutCome() {
 function OneRoundWinner(){
   if((userCounter = 3) || (cpuCounter = 2) || (tiesCounter = 2) && (roundsCounter = 5))
   {
-    alert(123)
+  
   }elseif ((userCounter = 2) || (cpuCounter = 3) || (tiesCounter = 2) && (roundsCounter = 5))
   {
-    alert(456)
+  
   }
 
 }
