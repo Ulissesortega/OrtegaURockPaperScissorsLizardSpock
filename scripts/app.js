@@ -13,8 +13,9 @@ let userInput;
 let res;
 let vsCPU = document.getElementById("vsCPU");
 let tPlayers = document.getElementById("tPlayers");
-let box1 = document.getElementById("box1");
-let box2 = document.getElementById("box2");
+let oneround = document.getElementById("oneround");
+let fiverounds = document.getElementById("fiverounds");
+let sevenrounds = document.getElementById("sevenrounds");
 
 
 //Counters===========================================================================================
@@ -30,7 +31,7 @@ console.log(tiesCounter)
 let roundsCounter = userCounter + cpuCounter + tiesCounter;
 console.log(roundsCounter)
 
-//Event Listeners====================================================================================
+//Event Listene rs Images================================================================================
 rock.addEventListener("click", function () {
   userInput = "rock"
   console.log(userInput);
@@ -72,19 +73,59 @@ spock.addEventListener("click", function () {
   GetData();
 })
 
-vsCPU.addEventListener("change", (e) => {
-  console.log(e.target.checked)
-  if (e.target.checked){
-    box2.className = "notvisible"
-  }else{
-    box2.className = "notvisible"
-  } 
-  
+//Event Listene Check Boxes================================================================================
+vsCPU.addEventListener("click", () => {
+  if(document.getElementById("vsCPU").checked){
+  document.getElementById("tPlayers").disabled = true;
+}
+else{
+  document.getElementById("tPlayers").disabled = false;
+}
 })
 
 tPlayers.addEventListener("click", () => {
-  box1.className ="notvisible"
+  if(document.getElementById("tPlayers").checked){
+    document.getElementById("vsCPU").disabled = true;
+  }
+  else{
+    document.getElementById("vsCPU").disabled = false;  
+  }
 })
+
+oneround.addEventListener("click", () =>{
+  if(document.getElementById("oneround").checked){
+    document.getElementById("fiverounds").disabled = true;
+    document.getElementById("sevenrounds").disabled = true;
+  }
+  else{
+    document.getElementById("fiverounds").disabled = false;
+    document.getElementById("sevenrounds").disabled = false;  
+  }
+})
+
+fiverounds.addEventListener("click", () =>{
+  if(document.getElementById("fiverounds").checked){
+    document.getElementById("oneround").disabled = true;
+    document.getElementById("sevenrounds").disabled = true;
+  }
+  else{
+    document.getElementById("oneround").disabled = false;
+    document.getElementById("sevenrounds").disabled = false;  
+  }
+})
+
+sevenrounds.addEventListener("click", () =>{
+  if(document.getElementById("sevenrounds").checked){
+    document.getElementById("oneround").disabled = true;
+    document.getElementById("fiverounds").disabled = true;
+  }
+  else{
+    document.getElementById("oneround").disabled = false;
+    document.getElementById("fiverounds").disabled = false;  
+  }
+})
+
+
 
 
 
@@ -184,7 +225,7 @@ GetData();
 //Function Outome=========================================================================================
 function OutCome() {
 
-  //?Rock
+  //Rock================================================================
   if (userInput == "rock" && res == "Rock") {
     injectHere.textContent = "Rock vs. Rock, This is a Tie!"
     tiesCounter++
@@ -216,7 +257,7 @@ function OutCome() {
     roundsCounter++
   }
 
-  //?Paper
+  //Paper========================================================
   if (userInput == "paper" && res == "Paper") {
     injectHere.textContent = "Paper vs. Paper, This is a Tie!"
     tiesCounter++
@@ -248,7 +289,7 @@ function OutCome() {
     roundsCounter++
   }
 
-  //?Scissors
+  //Scissors======================================================
   if (userInput == "scissors" && res == "Scissors") {
     injectHere.textContent = "Scissors vs. scissors, This is a Tie!"
     tiesCounter++
@@ -312,7 +353,7 @@ function OutCome() {
     roundsCounter++
   }
 
-  //?Spock
+  //Spock
   if (userInput == "spock" && res == "Spock") {
     injectHere.textContent = "Spock vs. Spock, This is a Tie!"
     tiesCounter++
@@ -346,3 +387,10 @@ function OutCome() {
 }
 
 //Game Modes===========================================================================================
+
+function isChecked(){
+  
+}
+
+
+
