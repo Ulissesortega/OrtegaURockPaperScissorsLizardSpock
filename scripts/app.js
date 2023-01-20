@@ -17,6 +17,9 @@ let oneround = document.getElementById("oneround");
 let fiverounds = document.getElementById("fiverounds");
 let sevenrounds = document.getElementById("sevenrounds");
 let gamebody = document.getElementById("gamepanel");
+let oneroundclick;
+let fiveroundsclick;
+let sevenroundsclick;
 
 
 //Counters===========================================================================================
@@ -24,7 +27,7 @@ let userCounter = 0;
 console.log(userCounter)
 
 let cpuCounter = 0;
-console.log(userCounter)
+console.log(cpuCounter)
 
 let tiesCounter = 0;
 console.log(tiesCounter)
@@ -49,7 +52,7 @@ paper.addEventListener("click", function () {
   GetData();
 })
 
-scissors.addEventListener("click", function () {
+scissors.addEventListener("click", () => {
   userInput = "scissors"
   console.log(userInput);
   console.log(res);
@@ -57,7 +60,7 @@ scissors.addEventListener("click", function () {
   GetData();
 })
 
-lizard.addEventListener("click", function () {
+lizard.addEventListener("click", () => {
   userInput = "lizard"
   console.log(userInput);
   console.log(res);
@@ -65,7 +68,7 @@ lizard.addEventListener("click", function () {
   GetData();
 })
 
-spock.addEventListener("click", function () {
+spock.addEventListener("click", () => {
   userInput = "spock"
   console.log(userInput);
   console.log(res);
@@ -98,6 +101,7 @@ tPlayers.addEventListener("click", () => {
 
 oneround.addEventListener("click", () =>{
   if(document.getElementById("oneround").checked){
+    oneroundclick = true;
     document.getElementById("fiverounds").disabled = true;
     document.getElementById("sevenrounds").disabled = true;
     document.getElementById("gamepanel").classList.remove("hide");
@@ -111,6 +115,7 @@ oneround.addEventListener("click", () =>{
 
 fiverounds.addEventListener("click", () =>{
   if(document.getElementById("fiverounds").checked){
+    fiveroundsclick = true
     document.getElementById("oneround").disabled = true;
     document.getElementById("sevenrounds").disabled = true;
     document.getElementById("gamepanel").classList.remove("hide");
@@ -393,16 +398,41 @@ function OutCome() {
 }
 
 //Game Modes===========================================================================================
-function OneRoundWinner(){
-  if((userCounter = 3) || (cpuCounter = 2) || (tiesCounter = 2) && (roundsCounter = 5))
-  {
-  
-  }elseif ((userCounter = 2) || (cpuCounter = 3) || (tiesCounter = 2) && (roundsCounter = 5))
-  {
-  
-  }
 
-}
 
+
+
+
+
+
+
+
+
+// if(oneroundclick == true){Winner()}
+// function Winner(){
+//   if((userCounter == 1) && (cpuCounter == 0) && (tiesCounter == 0)  && (roundsCounter == 1))
+  
+//   {
+//     alert("PLayer Win")
+//     window.location.reload();
+//   }
+//   else if((cpuCounter == 1))
+//   {
+//     alert("CPU Wins!")
+//     window.location.reload();
+// }else{
+//   alert("tie")
+//   window.location.reload();
+// }
+// }
+
+// if(fiverounds.checked){Winner2()}
+// function Winner2(){
+//   if(userCounter == 3) 
+//   {alert("Player Win")}
+//   else if(cpuCounter == 3){
+//     alert("CPU Wins")
+//   }
+// }
 
 
